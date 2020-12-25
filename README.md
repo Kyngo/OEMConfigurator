@@ -17,3 +17,7 @@ This source code is given free of charge, just be nice and don't remove my name 
 ## Contributing
 
 Make your changes, upload the code to GitHub and make a PR. If I like what I see, I'll add your changes.
+
+## Contributions
+
+The app icon is copyrighted by Google. Feel free to submit other logos you make!
