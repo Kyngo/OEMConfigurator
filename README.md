@@ -1,7 +1,5 @@
 # OEM Configurator
 
-------
-
 This tool allows you to edit your OEM configuration in the Windows System Properties menu.
 
 ## Running this tool
