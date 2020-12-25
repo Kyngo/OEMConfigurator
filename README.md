@@ -2,6 +2,8 @@
 
 This tool allows you to edit your OEM configuration in the Windows System Properties menu.
 
+![example image](screenshot.png)
+
 ## Running this tool
 
 You `must` run this tool as administrator, as editing the registry requires such permission. Once you enter all the data you wish to put, just hit "Apply Changes", and it's done!
