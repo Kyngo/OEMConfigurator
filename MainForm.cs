@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace OEMConfigurator {
 	public partial class MainForm : Form {
@@ -13,7 +15,16 @@ namespace OEMConfigurator {
 		public MainForm() {
 			InitializeComponent();
 			this.buildContents();
-		}
+            var reg = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows NT\CurrentVersion");
+            var currentBuildStr = (string)reg.GetValue("CurrentBuild");
+            var currentBuild = int.Parse(currentBuildStr);
+            if (currentBuild > 22000)
+			{
+				MessageBox.Show("You're running Windows 11, which does not make use of the image feature. " +
+					"The configuration will be stored, but you won't be able to see the image in the System Properties page.",
+					"Important - Please read", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+        }
 
 		private void buildContents() {
 			this.txtManufacturer.Text = cnf.GetOEMRecord("Manufacturer");
@@ -79,7 +90,7 @@ namespace OEMConfigurator {
 					File.Copy(imgPath, oemLogoPath);
 					copyImage = true;
 				} catch (Exception) {
-					MessageBox.Show("The logo could not be copied to a secure directory!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					MessageBox.Show("The logo could not be copied to a secure directory! Applying changes WITHOUT it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					copyImage = false;
 				}
             }
@@ -102,5 +113,10 @@ namespace OEMConfigurator {
         private void clickBtnAbout(object sender, EventArgs e) {
 			MessageBox.Show("OEMConfigurator\n\nSimple tool to edit the OEM registry entries regarding your computer's brand and OEM specs.\n\nCreated by Kyngo\n\nhttps://github.com/Kyngo/OEMConfigurator", "OEMConfigurator", MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
+
+        private void clickBtnGithub(object sender, EventArgs e)
+        {
+			System.Diagnostics.Process.Start("https://github.com/Kyngo/OEMConfigurator");
+        }
     }
 }

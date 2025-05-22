@@ -47,6 +47,7 @@ namespace OEMConfigurator
             this.btnApplyChanges = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnClearLogo = new System.Windows.Forms.Button();
+            this.btnGithub = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +108,7 @@ namespace OEMConfigurator
             // imgLogo
             // 
             this.imgLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgLogo.Location = new System.Drawing.Point(53, 162);
+            this.imgLogo.Location = new System.Drawing.Point(76, 162);
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.Size = new System.Drawing.Size(80, 80);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -120,42 +121,42 @@ namespace OEMConfigurator
             // 
             // txtManufacturer
             // 
-            this.txtManufacturer.Location = new System.Drawing.Point(88, 12);
+            this.txtManufacturer.Location = new System.Drawing.Point(96, 12);
             this.txtManufacturer.Name = "txtManufacturer";
-            this.txtManufacturer.Size = new System.Drawing.Size(180, 20);
+            this.txtManufacturer.Size = new System.Drawing.Size(195, 20);
             this.txtManufacturer.TabIndex = 10;
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(88, 43);
+            this.txtModel.Location = new System.Drawing.Point(96, 43);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(180, 20);
+            this.txtModel.Size = new System.Drawing.Size(195, 20);
             this.txtModel.TabIndex = 11;
             // 
             // txtSupportHours
             // 
-            this.txtSupportHours.Location = new System.Drawing.Point(88, 74);
+            this.txtSupportHours.Location = new System.Drawing.Point(96, 74);
             this.txtSupportHours.Name = "txtSupportHours";
-            this.txtSupportHours.Size = new System.Drawing.Size(180, 20);
+            this.txtSupportHours.Size = new System.Drawing.Size(195, 20);
             this.txtSupportHours.TabIndex = 12;
             // 
             // txtSupportPhone
             // 
-            this.txtSupportPhone.Location = new System.Drawing.Point(88, 103);
+            this.txtSupportPhone.Location = new System.Drawing.Point(96, 103);
             this.txtSupportPhone.Name = "txtSupportPhone";
-            this.txtSupportPhone.Size = new System.Drawing.Size(180, 20);
+            this.txtSupportPhone.Size = new System.Drawing.Size(195, 20);
             this.txtSupportPhone.TabIndex = 13;
             // 
             // txtSupportURL
             // 
-            this.txtSupportURL.Location = new System.Drawing.Point(88, 134);
+            this.txtSupportURL.Location = new System.Drawing.Point(96, 134);
             this.txtSupportURL.Name = "txtSupportURL";
-            this.txtSupportURL.Size = new System.Drawing.Size(180, 20);
+            this.txtSupportURL.Size = new System.Drawing.Size(195, 20);
             this.txtSupportURL.TabIndex = 14;
             // 
             // btnChangeImage
             // 
-            this.btnChangeImage.Location = new System.Drawing.Point(140, 161);
+            this.btnChangeImage.Location = new System.Drawing.Point(163, 161);
             this.btnChangeImage.Name = "btnChangeImage";
             this.btnChangeImage.Size = new System.Drawing.Size(128, 23);
             this.btnChangeImage.TabIndex = 15;
@@ -165,7 +166,7 @@ namespace OEMConfigurator
             // 
             // btnApplyChanges
             // 
-            this.btnApplyChanges.Location = new System.Drawing.Point(140, 219);
+            this.btnApplyChanges.Location = new System.Drawing.Point(163, 219);
             this.btnApplyChanges.Name = "btnApplyChanges";
             this.btnApplyChanges.Size = new System.Drawing.Size(128, 23);
             this.btnApplyChanges.TabIndex = 16;
@@ -175,18 +176,18 @@ namespace OEMConfigurator
             // 
             // btnAbout
             // 
-            this.btnAbout.Location = new System.Drawing.Point(12, 219);
+            this.btnAbout.Location = new System.Drawing.Point(12, 190);
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(21, 23);
+            this.btnAbout.Size = new System.Drawing.Size(55, 23);
             this.btnAbout.TabIndex = 17;
-            this.btnAbout.Text = "?";
+            this.btnAbout.Text = "About";
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.clickBtnAbout);
             // 
             // btnClearLogo
             // 
             this.btnClearLogo.Enabled = false;
-            this.btnClearLogo.Location = new System.Drawing.Point(140, 190);
+            this.btnClearLogo.Location = new System.Drawing.Point(163, 190);
             this.btnClearLogo.Name = "btnClearLogo";
             this.btnClearLogo.Size = new System.Drawing.Size(128, 23);
             this.btnClearLogo.TabIndex = 18;
@@ -194,11 +195,22 @@ namespace OEMConfigurator
             this.btnClearLogo.UseVisualStyleBackColor = true;
             this.btnClearLogo.Click += new System.EventHandler(this.clickBtnClearImage);
             // 
+            // btnGithub
+            // 
+            this.btnGithub.Location = new System.Drawing.Point(12, 219);
+            this.btnGithub.Name = "btnGithub";
+            this.btnGithub.Size = new System.Drawing.Size(55, 23);
+            this.btnGithub.TabIndex = 19;
+            this.btnGithub.Text = "GitHub";
+            this.btnGithub.UseVisualStyleBackColor = true;
+            this.btnGithub.Click += new System.EventHandler(this.clickBtnGithub);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 254);
+            this.ClientSize = new System.Drawing.Size(304, 254);
+            this.Controls.Add(this.btnGithub);
             this.Controls.Add(this.btnClearLogo);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnApplyChanges);
@@ -246,6 +258,7 @@ namespace OEMConfigurator
 		private System.Windows.Forms.Button btnApplyChanges;
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Button btnClearLogo;
+        private System.Windows.Forms.Button btnGithub;
     }
 }
 
